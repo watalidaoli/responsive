@@ -8,6 +8,30 @@
   <title>布局切换动画特效</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
+  <style>
+    /* css */
+    .frt {
+      width: 0px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      position: absolute;
+      z-index: -1;
+      top: 0px;
+      left: 60px;
+      opacity: 0;
+      transition: all 0.3s linear;
+    }
+
+    #more:hover {
+      transform: rotate(45deg);
+    }
+
+    #more:hover+.frt {
+      opacity: 1;
+      width: 200px;
+    }
+  </style>
 </head>
 
 <body>
@@ -23,7 +47,12 @@
   <!-- coidea:sidebar START -->
   <aside class="sidebar">
     <div class="logo">
-      <a href="javascript:;">+</a>
+      <a href="javascript:;" id="more">+</a>
+      <div class="frt">
+        <a href="javascript:;"><span>☆</span></a>
+        <a href="javascript:;"><span>☆</span></a>
+        <a href="javascript:;"><span>☆</span></a>
+      </div>
     </div>
   </aside>
   <!-- coidea:sidebar END -->
@@ -196,8 +225,8 @@
       console.log(gm);
       var html = "";
       var n = 18;
-      var now=new Date();
-      var nowStr=now.toLocaleDateString();
+      var now = new Date();
+      var nowStr = now.toLocaleDateString();
       for (var i = 0; i < n; i++) {
         html += `<div class="masonry__item">
           <figure>
@@ -226,7 +255,6 @@
   <script src="assets/js/masonry.pkgd.js"></script>
   <script src="assets/js/imagesloaded.pkgd.min.js"></script>
   <script src="assets/js/demo.js"></script>
-
 </body>
 
 </html>
