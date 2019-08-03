@@ -3,7 +3,7 @@ responsive
 
 项目名称：changes
 
-项目地址：http://changes.applinzi.com/responsive
+项目地址：http://changes.applinzi.com/responsive/
 
 Git 仓库：https://github.com/watalidaoli/responsive
 
